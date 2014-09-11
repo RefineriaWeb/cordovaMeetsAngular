@@ -1,18 +1,19 @@
 // Require Gulp
-var gulp = require('gulp');
-
-// Require all needed modules
-var concat = require('gulp-concat');
+var gulp = require('gulp'),
+    buildConfig = require('./config/build.config'),
+    concat = require('gulp-concat'),
+    header = require ('gulp-header'),
+    footer = require ('gulp-footer');
 
 
 // Concat task
-gulp.task('unify', function(){
-    gulp.src('./src/**/*.js')
+gulp.task('build', function(){
+    gulp.src(buildConfig.pluginFiles)
     .pipe(concat('cordovameetsangular.js'))
-    .pipe(gulp.dest('./dist/'));
+    .pipe(header(buildConfig.closureStart))
+    .pipe(footer(buildConfig.closureEnd))
+    .pipe(gulp.dest(buildConfig.dist));
 });
 
 // Default task
-gulp.task('default', function() {
-    console.log('default function');
-});
+gulp.task('default', ['build']);

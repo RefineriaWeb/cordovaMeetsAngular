@@ -4,7 +4,7 @@
  * install: cordova plugin add org.apache.cordova.network-information
  */
 
-angular.module('cordovaMeetsAngular.plugins.network',[])
+angular.module('cordovaMeetsAngular.plugins',[])
     .factory('$cordovaNetwork', [function() {
 
         return {
@@ -19,7 +19,7 @@ angular.module('cordovaMeetsAngular.plugins.network',[])
                     }
 
                 }catch( e ){
-                    console.log(e);
+                    console.warn(e);
                 }
             },
 
@@ -34,7 +34,7 @@ angular.module('cordovaMeetsAngular.plugins.network',[])
                         throw 'No navigator.connection available in this browser';
                     }
                 }catch (e) {
-                    console.alert(e);
+                    console.warn(e);
                 }
             },
 
@@ -51,7 +51,7 @@ angular.module('cordovaMeetsAngular.plugins.network',[])
                     }
 
                 }catch (e) {
-                    console.alert(e);
+                    console.warn(e);
                 }
 
             }
