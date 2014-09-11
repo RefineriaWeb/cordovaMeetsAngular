@@ -10,7 +10,7 @@
     "globals"
   ],
   "dependencies":[
-    "angular": "1.2.23"
+    "angular": "~1.2.23"
   ],
   "keywords": [
     "angular",
