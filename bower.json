@@ -2,9 +2,6 @@
   "name": "cordova-meets-angular",
   "version": "0.0.1",
   "homepage": "https://github.com/RefineriaWeb/cordovaMeetsAngular",
-  "authors": [
-    "Refineria Web <desarrollo@refineriaweb.com>"
-  ],
   "description": "A JS Wrapper for cordova plugins to be used in Angular Mobile projects",
   "moduleType": [
     "globals"
